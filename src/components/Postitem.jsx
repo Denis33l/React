@@ -6,10 +6,11 @@ const Postitem = (props) => {
   return (
     <div className="post">
       <div className="post__content">
+
         <img src={props.post.image} alt="logo" height="90px"/>
 
         <div className="post__decription">
-          <h2 className="name">{props.post.name} <img src={checkmark} alt="check" /></h2>
+          <h2 className="name">{props.post.name} {props.post.isVerified && <img src={checkmark} alt="check" />}</h2>
 
           <div className="post__location">  
             <p className="location"><img src={props.post.mapMini} alt="map" /> {props.post.location}</p>

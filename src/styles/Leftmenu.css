@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+.btn__menu {
+    margin-top: 37px;
+    background-color: #000000;
+    color: #FFFFFF;
+
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.btn__menu:nth-child(2) {
+    max-width: 150px;
+    padding: 7px 58px 6px 15px;
+    background: #FFFF;
+}
+
+.item__description{
+    color: #FFFFFF;
+}

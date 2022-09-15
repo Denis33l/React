@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Postitem from './components/Postitem';
 import './styles/App.css'
+import './styles/Header.css'
+import './styles/Leftmenu.css'
+import './styles/Postitem.css'
 import ImageMark from "../src/img/post/mark.png";
 import ImageAttila from "../src/img/post/attila.png";
 import ImageSerena from "../src/img/post/Serena.png";
@@ -27,31 +30,46 @@ import Home from "../src/img/leftmenu/Home.png"
 function App() {
 
   const [posts, setPosts] = useState([
-    { id: 1, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageMark, name: 'Andre Mark', location: 'Moscow, Russia', profession: 'Marketing Intern - ', abilities: ' Google', clock: '10-20 hrs/week', available: 'Available' },
-    { id: 2, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageAttila, name: 'Attila A', location: 'Saint Petersburg, Russia', profession: 'Front-End Developer -', abilities: 'VTB', clock: '10-20 hrs/week', available: 'Available' },
-    { id: 3, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageSerena, name: 'Serena M', location: 'Saint Petersburg, Russia', profession: 'Russian Translator -', abilities: 'Apple Russia', clock: '10-20 hrs/week', available: 'Unavailable' },
-    { id: 4, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageNicholas, name: 'Nicholas G', location: 'Novosibirsk, Russia', profession: 'Content Writer -', abilities: 'Joy Radio', clock: '10-20 hrs/week', available: 'available' },
+    { id: 1, isVerified: true, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageMark, name: 'Andre Mark', location: 'Moscow, Russia', profession: 'Marketing Intern - ', abilities: ' Google', clock: '10-20 hrs/week', available: 'Available' },
+    { id: 2, isVerified: false, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageAttila, name: 'Attila A', location: 'Saint Petersburg, Russia', profession: 'Front-End Developer -', abilities: 'VTB', clock: '10-20 hrs/week', available: 'Available' },
+    { id: 3, isVerified: false, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageSerena, name: 'Serena M', location: 'Saint Petersburg, Russia', profession: 'Russian Translator -', abilities: 'Apple Russia', clock: '10-20 hrs/week', available: 'Unavailable' },
+    { id: 4, isVerified: false, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageNicholas, name: 'Nicholas G', location: 'Novosibirsk, Russia', profession: 'Content Writer -', abilities: 'Joy Radio', clock: '10-20 hrs/week', available: 'available' },
   ])
 
   const [items, setItems] = useState([
-    {id: 1, itemText: 'Create', itemImage: Edit},
-    {id: 2, itemText: 'Talents', itemImage: Search},
-    {id: 3, itemText: 'Offers', itemImage: Ticket},
-    {id: 4, itemText: 'Messenger', itemImage: Chat},
-    {id: 5, itemText: 'Page', itemImage: Home},
+    { id: 1, itemText: 'Create', itemImage: Edit },
+    { id: 2, itemText: 'Talents', itemImage: Search },
+    { id: 3, itemText: 'Offers', itemImage: Ticket },
+    { id: 4, itemText: 'Messenger', itemImage: Chat },
+    { id: 5, itemText: 'Page', itemImage: Home },
   ])
 
   return (
     <div className='App'>
       <Header />
 
-      {items.map(item =>
-        <Leftmenu item={item} key={item.id} />
-      )}
+      <div className="post__container">
+        {/* <button>Create</button> */}
+        <div>
+          {items.map(item =>
+            <Leftmenu item={item} key={item.id} />
+          )}
+        </div>
 
-      {posts.map(post =>
-        <Postitem post={post} key={post.id} />
-      )}
+
+
+
+        <div>
+          <div className='post__input'>
+            <input type="text" />
+            <input type="text" />
+          </div>
+          {posts.map(post =>
+            <Postitem post={post} key={post.id} />
+          )}
+        </div>
+      </div>
+
     </div>
   );
 }
