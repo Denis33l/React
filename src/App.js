@@ -31,6 +31,9 @@ import BigMark from "../src/img/postitem/mark.png"
 import Description from './components/Description';
 import "./styles/Description.css";
 
+import About from './components/About';
+import "./styles/About.css";
+
 
 
 
@@ -81,12 +84,30 @@ function App() {
           )}
         </div>
 
-        <div className="description__background">
-          {texts.map(text =>
-            <Description text={text} key={text.id} />
-          )}
+        <div className="all__background">
+          <div className="description__background">
+            {texts.map(text =>
+              <Description text={text} key={text.id} />
+            )}
+          </div>
 
+          <div className="container__description">
+            <div className="about">
+              <p className="about__color">About</p>
+              <p className="about__text">
+                I am a full-time student at Full Sail University to pursue a bachelor's degree in Computer Animation. I am a loving wife and fur mom.
+                I have graduated from TVCC in the year of 2020 with an Associate's of Arts Degree. I graduated from Mabank High School in the year of 2018.
+                I am very passionate in art and want to pursue it as a way of making a living for family. I am a hard worker whom is willing to do anything for my husband and my fur-daughter.
+              </p>
+            </div>
+
+              
+
+          </div>
         </div>
+
+
+
       </div>
 
     </div>

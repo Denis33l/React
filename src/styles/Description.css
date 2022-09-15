@@ -11,8 +11,12 @@
     min-width: 521px;
 }
 
-.description__background {
-    
+.all__background {
+    background: #242526;
+}
+
+.description__background{
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .name {
@@ -106,7 +110,10 @@
 
 .description__location{
     display: flex;
+    gap: 5px;
 }
+
+
 
 .actifity{
     font-family: 'Poppins';

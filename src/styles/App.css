@@ -18,3 +18,9 @@ button {
     background-color: transparent;
     cursor: pointer;
 }
+
+.container__description {
+    max-width: 485px;
+    margin: 0 auto;
+
+}
