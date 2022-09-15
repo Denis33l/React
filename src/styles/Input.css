@@ -1,0 +1,17 @@
+.post__input {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.post__input-name {
+    padding: 10px 92px 10px 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.post__input-filter {
+    padding: 10px 13px 10px 30px;
+    border-radius: 5px;
+    border: none;
+}

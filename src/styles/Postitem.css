@@ -10,6 +10,14 @@
     display: flex;
 }
 
+.post__line {
+    border: 1px solid #242526;
+    filter: drop-shadow(3px 3px 15px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    margin-top: 13px;
+    padding: 20px 30px;
+}
+
 .post {
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 8px;
@@ -27,14 +35,17 @@
     padding: 34px 16px 36px 45px;
     display: flex;
     gap: 25px;
-    min-width: 261px;
+    min-width: 506px;
 }
 
 .name {
-    /* margin-bottom: 6px; */
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 
@@ -43,6 +54,11 @@
     font-family: 'Poppins';
     font-weight: 400;
     font-size: 8px;
+}
+
+.location {
+    display: flex;
+    gap: 3px;
 }
 
 .profession {
@@ -96,11 +112,11 @@
 
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
 
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 8px;
+    font-size: 7px;
 }
 
 .btn__available:nth-child(3) {

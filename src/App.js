@@ -4,6 +4,8 @@ import './styles/App.css'
 import './styles/Header.css'
 import './styles/Leftmenu.css'
 import './styles/Postitem.css'
+import './styles/Input.css'
+
 import ImageMark from "../src/img/post/mark.png";
 import ImageAttila from "../src/img/post/attila.png";
 import ImageSerena from "../src/img/post/Serena.png";
@@ -25,6 +27,9 @@ import Edit from "../src/img/leftmenu/Edit.png"
 import Ticket from "../src/img/leftmenu/Ticket.png"
 import Home from "../src/img/leftmenu/Home.png"
 
+import BigMark from "../src/img/postitem/mark.png"
+
+import Discription from './components/Discription';
 
 
 function App() {
@@ -44,13 +49,18 @@ function App() {
     { id: 5, itemText: 'Page', itemImage: Home },
   ])
 
+
+  const [text, setText] = useState([
+    { id: 1, image: BigMark, name: 'Andre Mark', profession: 'Traditional/Digital Artist passionate about Art', contact: 'connect', clock: '10-20 hrs/week', available: 'Available', location: 'Moscow, Russia', activity: 'Joined 5 months ago' },
+  ])
+
   return (
     <div className='App'>
       <Header />
 
       <div className="post__container">
         {/* <button>Create</button> */}
-        <div>
+        <div className='leftmenu'>
           {items.map(item =>
             <Leftmenu item={item} key={item.id} />
           )}
@@ -59,15 +69,20 @@ function App() {
 
 
 
-        <div>
-          <div className='post__input'>
-            <input type="text" />
-            <input type="text" />
+        <div className="post__line">
+          <div className="post__input">
+            <input className='post__input-name' type="search" placeholder="Search by name, skill, location, school" />
+            <input className='post__input-filter' type="search" placeholder='Filter Search' />
           </div>
           {posts.map(post =>
             <Postitem post={post} key={post.id} />
           )}
         </div>
+
+        {text.map(text =>
+            <Discription text={text} key={text.id} />
+          )}
+
       </div>
 
     </div>

@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+.container {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.post__container {
+    display: flex;
+}
 
 .btn__menu {
     margin-top: 37px;
@@ -22,4 +31,8 @@
 
 .item__description{
     color: #FFFFFF;
+}
+
+.leftmenu {
+    margin-right: 45px;
 }

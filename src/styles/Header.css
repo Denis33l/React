@@ -3,7 +3,8 @@
 .header__content {
     display: flex;
     justify-content: space-between;
-    margin: 15px 0 27px;
+    align-items: center;
+    margin: 15px 0 16px;
 }
 
 
@@ -36,4 +37,8 @@
 
 .logo {
     max-height: 24px;
+}
+
+.header__line{
+    border: 1px solid rgba(36, 37, 38, 1);
 }

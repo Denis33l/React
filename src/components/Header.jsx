@@ -7,7 +7,7 @@ import Row from "../img/header/vector.png"
 
 const Header = () => {
     return (
-        <header className='header'>
+        <header className="header">
             <div className="container">
                 <div className="header__content">
                     <img src={Logo} alt="Logo" className="logo" />
@@ -20,6 +20,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            <div className="header__line"></div>
         </header>
     );
 };
