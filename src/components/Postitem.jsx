@@ -8,7 +8,7 @@ const Postitem = (props) => {
       <div className="container">
         <div className="post__content">
 
-          <img src={props.post.image} alt="logo" height="80px" />
+          <img src={props.post.image} alt="Mark" height="80px" />
 
           <div className="post__decription">
             <h2 className="name">{props.post.name} {props.post.isVerified && <img src={checkmark} alt="check" height="15px" />}</h2>

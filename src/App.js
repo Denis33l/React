@@ -14,7 +14,6 @@ import ImageNicholas from "../src/img/post/nichilas.png";
 import ImageClock from "../src/img/post/clock.png"
 import ImageZap from "../src/img/post/zap.png"
 
-
 import Map from "../src/img/post/map.png"
 
 import Header from './components/Header';
@@ -29,7 +28,10 @@ import Home from "../src/img/leftmenu/Home.png"
 
 import BigMark from "../src/img/postitem/mark.png"
 
-import Discription from './components/Discription';
+import Description from './components/Description';
+import "./styles/Description.css";
+
+
 
 
 function App() {
@@ -50,8 +52,8 @@ function App() {
   ])
 
 
-  const [text, setText] = useState([
-    { id: 1, image: BigMark, name: 'Andre Mark', profession: 'Traditional/Digital Artist passionate about Art', contact: 'connect', clock: '10-20 hrs/week', available: 'Available', location: 'Moscow, Russia', activity: 'Joined 5 months ago' },
+  const [texts, setText] = useState([
+    { id: 1, imageBig: BigMark, name: 'Andre Mark', profession: 'Traditional/Digital Artist passionate about Art', contact: 'Сonnect', clock: '10-20 hrs/week', available: 'Available', location: 'Moscow, Russia', activity: 'Joined 5 months ago' },
   ])
 
   return (
@@ -79,10 +81,12 @@ function App() {
           )}
         </div>
 
-        {text.map(text =>
-            <Discription text={text} key={text.id} />
+        <div className="description__background">
+          {texts.map(text =>
+            <Description text={text} key={text.id} />
           )}
 
+        </div>
       </div>
 
     </div>
