@@ -6,7 +6,7 @@ const Postitem = (props) => {
   return (
     <div className="post">
       <div className="post__content">
-        <img src={props.post.image} alt="logo" height="80px" />
+        <img src={props.post.image} alt="logo" height="90px"/>
 
         <div className="post__decription">
           <h2 className="name">{props.post.name} <img src={checkmark} alt="check" /></h2>

@@ -42,15 +42,15 @@ body {
     /* margin-bottom: 6px; */
     font-family: 'Poppins';
     font-weight: 700;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 
 .post__location{
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     font-family: 'Poppins';
     font-weight: 400;
-    font-size: 10px;
+    font-size: 8px;
 }
 
 .profession {
@@ -58,23 +58,25 @@ body {
 }
 
 .post__profession {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-family: 'Poppins';
     font-weight: 700;
-    font-size: 10px;
+    font-size: 9px;
     white-space: normal;
 }
 
 .post__abilities {
     font-weight: 400;
     font-family: 'Poppins';
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .post__btn {
     display: flex;
     gap: 12px;
 
+    white-space: nowrap;
+    max-height: 17px;
 }
 
 .btn__clock {
@@ -89,6 +91,8 @@ body {
     font-size: 8px;
 
     display: flex;
+
+   align-items: flex-start;
 }
 
 .btn__available {
@@ -144,6 +148,15 @@ body {
     gap: 8px;
 }
 
+.header__menu-notification{
+    max-height: 25px;
+    margin: 10px 0;
+}
+
+.logo {
+    max-height: 24px;
+}
+
 /* ============================================== */
 
 .btn__menu {
@@ -155,12 +168,16 @@ body {
     gap: 5px;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
 }
 
 .btn__menu:nth-child(2) {
     max-width: 150px;
     padding: 7px 58px 6px 15px;
     background: #FFFF;
+
+    
 }
 
 .item__description{

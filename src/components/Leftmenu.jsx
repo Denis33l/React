@@ -8,8 +8,6 @@ const Leftmenu = (props) => {
         <button className="btn__menu"><img src={props.item.itemImage} alt="icon" />{props.item.itemText}</button>
 
         <div className="item__description">
-          <p>About</p>
-          <p>Privacy</p>
         </div>
       </div>
     </div>
