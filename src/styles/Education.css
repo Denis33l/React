@@ -1,0 +1,33 @@
+.education__description{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.animation {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.002em;
+
+    color: #FFFFFF;
+}
+
+.location__universiry {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.002em;
+
+    color: #FFFFFF;
+
+    opacity: 0.6;
+}

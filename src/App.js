@@ -34,6 +34,10 @@ import "./styles/Description.css";
 import About from './components/About';
 import "./styles/About.css";
 
+import emblem from "../src/img/postitem/emblem.png"
+import emblem2 from "../src/img/postitem/emblem2.png"
+import google from "../src/img/postitem/google.png"
+import "./styles/Education.css"
 
 
 
@@ -92,16 +96,44 @@ function App() {
           </div>
 
           <div className="container__description">
-            <div className="about">
-              <p className="about__color">About</p>
+            <section className="about">
+              <p className="title__color">About</p>
               <p className="about__text">
                 I am a full-time student at Full Sail University to pursue a bachelor's degree in Computer Animation. I am a loving wife and fur mom.
                 I have graduated from TVCC in the year of 2020 with an Associate's of Arts Degree. I graduated from Mabank High School in the year of 2018.
                 I am very passionate in art and want to pursue it as a way of making a living for family. I am a hard worker whom is willing to do anything for my husband and my fur-daughter.
               </p>
-            </div>
+            </section>
 
-              
+            <section className="education">
+              <p className="title__color">Education</p>
+              <div className="education__description">
+                <img src={emblem} alt="Emblem" />
+                <div className="education__university">
+                  <p className="animation">Msc, Computer Animation</p>
+                  <p className="location__universiry">University of London • Class of 2023</p>
+                </div>
+              </div>
+
+              <div className="education__description">
+                <img src={emblem2} alt="Emblem" />
+                <div className="education__university">
+                  <p className="animation">Bsc, Game Animation</p>
+                  <p className="location__universiry">Saint Petersburg State University • Class of 2020</p>
+                </div>
+              </div>
+            </section>
+
+            <section className="experience">
+              <div className="experience__description">
+                <img src={google} alt="google" />
+                <div className="education__university">
+                  <p className="animation">Marketing Intern </p>
+                  <p className="animation">Google • Los Angeles, USA (Remote)</p>
+                  <p className="location__universiry">Saint Petersburg State University • Class of 2020</p>
+                </div>
+              </div>
+            </section>
 
           </div>
         </div>
