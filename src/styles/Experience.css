@@ -1,0 +1,21 @@
+.experience__description {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 10px;
+    
+}
+
+.experience__subtitle {
+    margin-bottom: 10px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 20px;
+    
+    letter-spacing: 0.002em;
+
+    color: #FFFFFF;
+
+    margin-left: 40px;
+}

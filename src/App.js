@@ -39,6 +39,8 @@ import emblem2 from "../src/img/postitem/emblem2.png"
 import google from "../src/img/postitem/google.png"
 import "./styles/Education.css"
 
+import "./styles/Experience.css"
+
 
 
 function App() {
@@ -96,6 +98,7 @@ function App() {
           </div>
 
           <div className="container__description">
+            
             <section className="about">
               <p className="title__color">About</p>
               <p className="about__text">
@@ -125,14 +128,22 @@ function App() {
             </section>
 
             <section className="experience">
+              <p className="title__color">Experience</p>
               <div className="experience__description">
                 <img src={google} alt="google" />
                 <div className="education__university">
                   <p className="animation">Marketing Intern </p>
                   <p className="animation">Google • Los Angeles, USA (Remote)</p>
-                  <p className="location__universiry">Saint Petersburg State University • Class of 2020</p>
+                  <p className="location__universiry">Sep 2021 - Present • 6 months</p>
                 </div>
               </div>
+
+              <p className='experience__subtitle'>• Increase user base on Instagram from 1500 followers to 2200 followers.</p>
+              <p className='experience__subtitle'>• Create Reels and TikToks to engage students in events that reached over 31,000 views</p>
+              <p className='experience__subtitle'>• Film and edit videos to enhance our social media presence and capture the student’s attention</p>
+
+              <p className="experience__subtitle">Skills : Adobe Premiere Pro, Final Cut pro, Canva, and Short form editing for TikTok</p>
+
             </section>
 
           </div>
