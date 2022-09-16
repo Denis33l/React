@@ -20,7 +20,7 @@ button {
 }
 
 .container__description {
-    max-width: 485px;
+    max-width: 450px;
     margin: 0 auto;
 }
 
@@ -36,4 +36,35 @@ button {
     letter-spacing: 0.2px;
 
     color: #9A05EB;
+    margin-bottom: 10px;
+}
+
+.main__line {
+    background: #FFFFFF;
+    opacity: 0.5;
+    max-width: 486px;
+    margin: 16px 23px;
+}
+
+.basic__line {
+    background: #FFFFFF;
+    opacity: 0.2;
+    margin: 15px 0;
+}
+
+.btn__create {
+    background-color: Purple;
+    padding: 6px 15px;
+    border-radius: 10px;
+    margin: 23px 47px 0 38px;
+
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
 }

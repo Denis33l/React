@@ -5,10 +5,7 @@ const Leftmenu = (props) => {
 
     <div className="item">
       <div className="container">
-        <button className="btn__menu"><img src={props.item.itemImage} alt="icon" />{props.item.itemText}</button>
-
-        {/* <div className="item__description">
-        </div> */}
+        <button className="btn__menu"><img src={props.item.itemImage} alt="icon" /><span className="btn__styles">{props.item.itemText}</span></button>
       </div>
     </div>
   );

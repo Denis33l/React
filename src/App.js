@@ -53,7 +53,7 @@ function App() {
   ])
 
   const [items, setItems] = useState([
-    { id: 1, itemText: 'Create', itemImage: Edit },
+    // { id: 1, itemText: 'Create', itemImage: Edit },
     { id: 2, itemText: 'Talents', itemImage: Search },
     { id: 3, itemText: 'Offers', itemImage: Ticket },
     { id: 4, itemText: 'Messenger', itemImage: Chat },
@@ -70,12 +70,15 @@ function App() {
       <Header />
 
       <div className="post__container">
-        {/* <button>Create</button> */}
-        <div className='leftmenu'>
-          {items.map(item =>
-            <Leftmenu item={item} key={item.id} />
-          )}
-        </div>
+
+        {/* <div className="container"> */}
+          <div className='leftmenu'>
+            <button className='btn__create'><img src={Edit} alt="" />Create</button>
+            {items.map(item =>
+              <Leftmenu item={item} key={item.id} />
+            )}
+          </div>
+        {/* </div> */}
 
 
 
@@ -91,14 +94,16 @@ function App() {
         </div>
 
         <div className="all__background">
-          <div className="description__background">
-            {texts.map(text =>
-              <Description text={text} key={text.id} />
-            )}
+          <div className="description__wrapper">
+            <div className="description__background">
+              {texts.map(text =>
+                <Description text={text} key={text.id} />
+              )}
+            </div>
           </div>
 
           <div className="container__description">
-            
+
             <section className="about">
               <p className="title__color">About</p>
               <p className="about__text">
@@ -106,8 +111,12 @@ function App() {
                 I have graduated from TVCC in the year of 2020 with an Associate's of Arts Degree. I graduated from Mabank High School in the year of 2018.
                 I am very passionate in art and want to pursue it as a way of making a living for family. I am a hard worker whom is willing to do anything for my husband and my fur-daughter.
               </p>
-            </section>
 
+            </section>
+          </div>
+          <hr className='main__line' />
+
+          <div className="container__description">
             <section className="education">
               <p className="title__color">Education</p>
               <div className="education__description">
@@ -118,6 +127,9 @@ function App() {
                 </div>
               </div>
 
+              <hr className='basic__line' />
+
+
               <div className="education__description">
                 <img src={emblem2} alt="Emblem" />
                 <div className="education__university">
@@ -125,8 +137,13 @@ function App() {
                   <p className="location__universiry">Saint Petersburg State University • Class of 2020</p>
                 </div>
               </div>
-            </section>
 
+            </section>
+          </div>
+
+          <hr className='main__line' />
+
+          <div className="container__description">
             <section className="experience">
               <p className="title__color">Experience</p>
               <div className="experience__description">
@@ -138,9 +155,11 @@ function App() {
                 </div>
               </div>
 
-              <p className='experience__subtitle'>• Increase user base on Instagram from 1500 followers to 2200 followers.</p>
-              <p className='experience__subtitle'>• Create Reels and TikToks to engage students in events that reached over 31,000 views</p>
-              <p className='experience__subtitle'>• Film and edit videos to enhance our social media presence and capture the student’s attention</p>
+              <ul>
+                <li className='experience__subtitle'>Increase user base on Instagram from 1500 followers to 2200 followers.</li>
+                <li className='experience__subtitle'>Create Reels and TikToks to engage students in events that reached over 31,000 views</li>
+                <li className='experience__subtitle'>Film and edit videos to enhance our social media presence and capture the student’s attention</li>
+              </ul>
 
               <p className="experience__subtitle">Skills : Adobe Premiere Pro, Final Cut pro, Canva, and Short form editing for TikTok</p>
 

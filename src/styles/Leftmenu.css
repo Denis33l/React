@@ -8,26 +8,33 @@
 
 .post__container {
     display: flex;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 .btn__menu {
     margin-top: 37px;
-    background-color: #000000;
-    color: #FFFFFF;
-
+    background-color: #FFFFFF;
+    
     display: flex;
     gap: 5px;
     justify-content: center;
     align-items: center;
 
     cursor: pointer;
+
 }
 
-.btn__menu:nth-child(2) {
-    max-width: 150px;
-    padding: 7px 58px 6px 15px;
-    background: #FFFF;
+.btn__styles {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+
+    color: #9A05EB;
 }
+
 
 .item__description{
     color: #FFFFFF;
@@ -35,4 +42,8 @@
 
 .leftmenu {
     margin-right: 45px;
+}
+
+.btn__create {
+    color: #FFFFFF;
 }

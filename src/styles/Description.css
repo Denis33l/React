@@ -25,8 +25,13 @@
 
 .description__background{
     background: rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
+.description__wrapper {
+    margin: 6px 6px 0px 6px;
+}
 .name {
     font-family: 'Poppins';
     font-weight: 700;
@@ -36,44 +41,7 @@
     align-items: center;
 }
 
-.btn__clock {
-    padding: 2px 8px 4px 4px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    color: #FFFFFF;
-    border: none;
 
-    font-family: 'Poppins';
-    font-weight: 600;
-    font-size: 8px;
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    align-items: flex-start;
-
-    line-height: 22px;
-
-    letter-spacing: 0.02em;
-    max-height: 17px;
-}
-
-.btn__available {
-    padding: 3px 8px 4px 8px;
-    background: #3C983A;
-    border-radius: 10px;
-    color: #FFFFFF;
-    border: none;
-
-    display: flex;
-    align-items: center;
-    gap: 4px;
-
-    font-family: 'Poppins';
-    font-weight: 600;
-    font-size: 7px;
-}
 
 .description__profession {
     font-family: 'Poppins';

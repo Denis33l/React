@@ -22,7 +22,7 @@ const Description = (props) => {
 
             <div className="description__btn">
               <button className="btn__connect">{props.text.contact}</button>
-              <button className="btn__clock"><img src={Clock} alt="clock" />{props.text.clock}</button>
+              <button className="btn__clock"><img src={Clock} alt="clock" /><span className="btn__label">{props.text.clock}</span></button>
               <button className="btn__available"><img src={Zap} alt="zap" />{props.text.available}</button>
             </div>
 

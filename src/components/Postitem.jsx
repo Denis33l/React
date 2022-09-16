@@ -23,7 +23,7 @@ const Postitem = (props) => {
             </div>
 
             <div className="post__btn">
-              <button className="btn__clock"><img src={props.post.Imageclock} alt="clock" />{props.post.clock}</button>
+              <button className="btn__clock"><img src={props.post.Imageclock} alt="clock" /><span className="btn__label">{props.post.clock}</span></button>
               <button className="btn__available"><img src={props.post.Imagezap} alt="zap" />{props.post.available}</button>
             </div>
 
