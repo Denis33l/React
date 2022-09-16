@@ -10,6 +10,13 @@
     display: flex;
 }
 
+.post__like {
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    cursor: pointer;
+}
+
 .post__line {
     border: 1px solid #242526;
     filter: drop-shadow(3px 3px 15px rgba(0, 0, 0, 0.25));
@@ -27,6 +34,7 @@
     max-width: 506px;
     background: #242526;
     color: #FFFFFF;
+    position: relative;
 }
 
 .post:first-child {
@@ -89,15 +97,16 @@
     max-height: 17px;
 }
 
+
+
 .btn__clock {
-    /* padding: 2px 8px 4px 4px; */
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
   
     border: none;
 
    
-
+    padding-right: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,6 +118,8 @@
     font-size: 8px;
     color: #FFFFFF;
 }
+
+
 
 .btn__available {
     padding: 3px 8px 4px 8px;
@@ -124,5 +135,9 @@
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 7px;
+}
+
+.not_available_class {
+    background: #9F3232;
 }
 

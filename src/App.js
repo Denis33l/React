@@ -13,6 +13,8 @@ import ImageNicholas from "../src/img/post/nichilas.png";
 
 import ImageClock from "../src/img/post/clock.png"
 import ImageZap from "../src/img/post/zap.png"
+import Like from "../src/img/post/like.png"
+import LikeEmpty from "../src/img/post/likeempty.png"
 
 import Map from "../src/img/post/map.png"
 
@@ -45,29 +47,44 @@ import apple from "../src/img/footer/apple.png"
 import playstore from "../src/img/footer/playstore.png"
 import "./styles/Footer.css"
 
+import search from "../src/img/postitem/search.png"
+import row from "../src/img/postitem/Polygon.png"
 
 
 function App() {
 
   const [posts, setPosts] = useState([
-    { id: 1, isVerified: true, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageMark, name: 'Andre Mark', location: 'Moscow, Russia', profession: 'Marketing Intern - ', abilities: ' Google', clock: '10-20 hrs/week', available: 'Available' },
-    { id: 2, isVerified: false, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageAttila, name: 'Attila A', location: 'Saint Petersburg, Russia', profession: 'Front-End Developer -', abilities: 'VTB', clock: '10-20 hrs/week', available: 'Available' },
-    { id: 3, isVerified: false, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageSerena, name: 'Serena M', location: 'Saint Petersburg, Russia', profession: 'Russian Translator -', abilities: 'Apple Russia', clock: '10-20 hrs/week', available: 'Unavailable' },
-    { id: 4, isVerified: false, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageNicholas, name: 'Nicholas G', location: 'Novosibirsk, Russia', profession: 'Content Writer -', abilities: 'Joy Radio', clock: '10-20 hrs/week', available: 'available' },
+    { id: 1, isAvailable: false, like: Like, isVerified: true, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageMark, name: 'Andre Mark', location: 'Moscow, Russia', profession: 'Marketing Intern - ', abilities: ' Google', clock: '10-20 hrs/week', available: 'Available' },
+    { id: 2, isAvailable: false, like: LikeEmpty, isVerified: false, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageAttila, name: 'Attila A', location: 'Saint Petersburg, Russia', profession: 'Front-End Developer -', abilities: 'VTB', clock: '10-20 hrs/week', available: 'Available' },
+    { id: 3, isAvailable: true, like: LikeEmpty, isVerified: false, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageSerena, name: 'Serena M', location: 'Saint Petersburg, Russia', profession: 'Russian Translator -', abilities: 'Apple Russia', clock: '10-20 hrs/week', available: 'Unavailable' },
+    { id: 4, isAvailable: false, like: LikeEmpty, isVerified: false, mapMini: Map, Imagezap: ImageZap, Imageclock: ImageClock, image: ImageNicholas, name: 'Nicholas G', location: 'Novosibirsk, Russia', profession: 'Content Writer -', abilities: 'Joy Radio', clock: '10-20 hrs/week', available: 'available' },
   ])
+  
 
   const [items, setItems] = useState([
-    // { id: 1, itemText: 'Create', itemImage: Edit },
-    { id: 2, itemText: 'Talents', itemImage: Search },
-    { id: 3, itemText: 'Offers', itemImage: Ticket },
-    { id: 4, itemText: 'Messenger', itemImage: Chat },
-    { id: 5, itemText: 'Page', itemImage: Home },
+    { id: 1, isCurrent: true, itemText: 'Talents', itemImage: Search },
+    { id: 2, isCurrent: false, itemText: 'Offers', itemImage: Ticket },
+    { id: 3, isCurrent: false, itemText: 'Messenger', itemImage: Chat },
+    { id: 4, isCurrent: false, itemText: 'Page', itemImage: Home },
   ])
+
+  const handleNavItemClick = (newId) => {
+    const newItems = items.map((item) =>
+      item.id === newId
+        ? { ...item, isCurrent: true }
+        : { ...item, isCurrent: false}
+    );
+    console.log(newItems);
+    setItems(newItems);
+  };
+
 
 
   const [texts, setText] = useState([
     { id: 1, imageBig: BigMark, name: 'Andre Mark', profession: 'Traditional/Digital Artist passionate about Art', contact: 'Сonnect', clock: '10-20 hrs/week', available: 'Available', location: 'Moscow, Russia', activity: 'Joined 5 months ago' },
   ])
+
+  
 
   return (
     <div className='App'>
@@ -77,10 +94,11 @@ function App() {
 
         {/* <div className="container"> */}
         <div className='leftmenu'>
-          <button className='btn__create'><img src={Edit} alt="" />Create</button>
+          <button className='btn__create'><img src={Edit} alt="edit" />Create</button>
           {items.map(item =>
-            <Leftmenu item={item} key={item.id} />
+            <Leftmenu item={item} key={item.id} handleNavItemClick={() => handleNavItemClick(item.id)} id={item.id} />
           )}
+               
 
           <footer className='footer'>
             <div className="footer__links">
@@ -92,8 +110,8 @@ function App() {
 
             <div className="footer__soon">
               <p className="footer__soon-text">Coming Soon</p>
-              <a href="#"><img className='footer__soon-links' src={apple} alt="Apple" height="20px"/></a>
-              <a href="#"><img className='footer__soon-links' src={playstore} alt="Apple" height="20px"/></a>
+              <a href="#"><img className='footer__soon-links' src={apple} alt="Apple" height="20px" /></a>
+              <a href="#"><img className='footer__soon-links' src={playstore} alt="Apple" height="20px" /></a>
             </div>
 
             <div className="footer__year">
@@ -108,7 +126,9 @@ function App() {
 
         <div className="post__line">
           <div className="post__input">
+            <img className='post__search' src={search} alt="search" height="14px" />
             <input className='post__input-name' type="search" placeholder="Search by name, skill, location, school" />
+            <img className='post__row' src={row} alt="row" width="18px" height="10px" />
             <input className='post__input-filter' type="search" placeholder='Filter Search' />
           </div>
           {posts.map(post =>
@@ -170,7 +190,7 @@ function App() {
             <section className="experience">
               <p className="title__color">Experience</p>
               <div className="experience__description">
-                <img src={google} alt="google" height="50px"/>
+                <img src={google} alt="google" height="50px" />
                 <div className="education__university">
                   <p className="animation">Marketing Intern </p>
                   <p className="animation">Google • Los Angeles, USA (Remote)</p>

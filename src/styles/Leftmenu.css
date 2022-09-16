@@ -13,10 +13,6 @@
     padding: 0 10px;
 }
 
-.hidden {
-    background-color: #FFFFFF;
-    color: #9A05EB;
-}
 
 .btn__menu {
     margin-top: 37px;
@@ -30,15 +26,23 @@
     padding: 7px 58px 6px 15px;
 
     border-radius: 7px;
+    color: #FFFFFF;
+
 }
+
+.current_class {
+    background-color: #FFFFFF;
+    color: #9A05EB;
+}
+
+
 
 .btn__styles {
     font-family: 'Poppins';
     font-weight: 500;
     font-size: 14px;
     line-height: 22px;
-
-    color: #FFFFFF;
+    
 }
 
 
