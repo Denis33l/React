@@ -13,17 +13,23 @@
     padding: 0 10px;
 }
 
+.hidden {
+    background-color: #FFFFFF;
+    color: #9A05EB;
+}
+
 .btn__menu {
     margin-top: 37px;
-    background-color: #FFFFFF;
     
     display: flex;
     gap: 5px;
     justify-content: center;
     align-items: center;
-
     cursor: pointer;
 
+    padding: 7px 58px 6px 15px;
+
+    border-radius: 7px;
 }
 
 .btn__styles {
@@ -32,7 +38,7 @@
     font-size: 14px;
     line-height: 22px;
 
-    color: #9A05EB;
+    color: #FFFFFF;
 }
 
 

@@ -41,6 +41,10 @@ import "./styles/Education.css"
 
 import "./styles/Experience.css"
 
+import apple from "../src/img/footer/apple.png"
+import playstore from "../src/img/footer/playstore.png"
+import "./styles/Footer.css"
+
 
 
 function App() {
@@ -72,12 +76,31 @@ function App() {
       <div className="post__container">
 
         {/* <div className="container"> */}
-          <div className='leftmenu'>
-            <button className='btn__create'><img src={Edit} alt="" />Create</button>
-            {items.map(item =>
-              <Leftmenu item={item} key={item.id} />
-            )}
-          </div>
+        <div className='leftmenu'>
+          <button className='btn__create'><img src={Edit} alt="" />Create</button>
+          {items.map(item =>
+            <Leftmenu item={item} key={item.id} />
+          )}
+
+          <footer className='footer'>
+            <div className="footer__links">
+              <a href="#">About</a>
+              <a href="#">Privacy</a>
+              <a href="#">Support</a>
+              <a href="#">More</a>
+            </div>
+
+            <div className="footer__soon">
+              <p className="footer__soon-text">Coming Soon</p>
+              <a href="#"><img className='footer__soon-links' src={apple} alt="Apple" height="20px"/></a>
+              <a href="#"><img className='footer__soon-links' src={playstore} alt="Apple" height="20px"/></a>
+            </div>
+
+            <div className="footer__year">
+              <p className="footer__year-text">© 2022 Bukable, Inc.</p>
+            </div>
+          </footer>
+        </div>
         {/* </div> */}
 
 
@@ -147,7 +170,7 @@ function App() {
             <section className="experience">
               <p className="title__color">Experience</p>
               <div className="experience__description">
-                <img src={google} alt="google" />
+                <img src={google} alt="google" height="50px"/>
                 <div className="education__university">
                   <p className="animation">Marketing Intern </p>
                   <p className="animation">Google • Los Angeles, USA (Remote)</p>
@@ -175,5 +198,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;

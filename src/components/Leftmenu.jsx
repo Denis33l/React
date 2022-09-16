@@ -11,4 +11,10 @@ const Leftmenu = (props) => {
   );
 };
 
+// const button = document.querySelector(".btn__menu");
+
+// button.addEventListener("click", () => {
+//   button.classList.add("hidden");
+// });
+
 export default Leftmenu;

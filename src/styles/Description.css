@@ -21,6 +21,7 @@
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     max-width: 533px;
+    margin-bottom: 13px;
 }
 
 .description__background{

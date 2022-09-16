@@ -10,12 +10,12 @@ const Header = () => {
         <header className="header">
             <div className="container">
                 <div className="header__content">
-                    <img src={Logo} alt="Logo" className="logo" />
+                    <a href="#"><img src={Logo} alt="Logo" className="logo" /></a>
                     <div className="header__menu">
-                        <img src={Notification} alt="notification" className="header__menu-notification" />
+                        <a href="#"><img src={Notification} alt="notification" className="header__menu-notification" /></a>
                         <div className="header__menu-profile">
                             <img src={Circle} alt="circle" className="circle" />
-                            <img src={Row} alt="row" className="row" />
+                            <a href="#"><img src={Row} alt="row" className="row" /></a>
                         </div>
                     </div>
                 </div>
